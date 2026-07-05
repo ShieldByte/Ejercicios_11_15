@@ -116,12 +116,30 @@ class SQLListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by SQLParser#joinClause.
+    def enterJoinClause(self, ctx:SQLParser.JoinClauseContext):
+        pass
+
+    # Exit a parse tree produced by SQLParser#joinClause.
+    def exitJoinClause(self, ctx:SQLParser.JoinClauseContext):
+        pass
+
+
     # Enter a parse tree produced by SQLParser#selectList.
     def enterSelectList(self, ctx:SQLParser.SelectListContext):
         pass
 
     # Exit a parse tree produced by SQLParser#selectList.
     def exitSelectList(self, ctx:SQLParser.SelectListContext):
+        pass
+
+
+    # Enter a parse tree produced by SQLParser#selectItem.
+    def enterSelectItem(self, ctx:SQLParser.SelectItemContext):
+        pass
+
+    # Exit a parse tree produced by SQLParser#selectItem.
+    def exitSelectItem(self, ctx:SQLParser.SelectItemContext):
         pass
 
 

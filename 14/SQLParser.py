@@ -10,72 +10,87 @@ else:
 
 def serializedATN():
     return [
-        4,1,39,192,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,41,231,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
-        2,14,7,14,1,0,1,0,3,0,33,8,0,5,0,35,8,0,10,0,12,0,38,9,0,1,0,1,0,
-        1,1,1,1,1,1,1,1,3,1,46,8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,2,5,2,55,8,
-        2,10,2,12,2,58,9,2,1,2,1,2,1,3,1,3,1,4,1,4,1,4,5,4,67,8,4,10,4,12,
-        4,70,9,4,1,5,1,5,1,6,1,6,1,6,1,6,1,6,1,6,1,6,3,6,81,8,6,1,7,1,7,
-        1,7,1,7,3,7,87,8,7,1,8,1,8,1,8,1,8,1,8,1,8,1,8,5,8,96,8,8,10,8,12,
-        8,99,9,8,1,8,1,8,1,8,1,8,1,8,1,8,5,8,107,8,8,10,8,12,8,110,9,8,1,
-        8,1,8,1,9,1,9,1,9,1,9,1,9,1,9,5,9,120,8,9,10,9,12,9,123,9,9,1,9,
-        1,9,3,9,127,8,9,1,10,1,10,1,10,1,10,1,11,1,11,1,11,1,11,1,11,1,11,
-        1,11,1,11,1,11,3,11,142,8,11,1,11,1,11,3,11,146,8,11,1,12,1,12,1,
-        12,1,12,5,12,152,8,12,10,12,12,12,155,9,12,3,12,157,8,12,1,13,1,
-        13,3,13,161,8,13,1,14,1,14,1,14,1,14,3,14,167,8,14,1,14,1,14,1,14,
-        1,14,1,14,1,14,1,14,1,14,1,14,1,14,1,14,1,14,1,14,1,14,1,14,1,14,
-        1,14,1,14,5,14,187,8,14,10,14,12,14,190,9,14,1,14,0,1,28,15,0,2,
-        4,6,8,10,12,14,16,18,20,22,24,26,28,0,0,204,0,36,1,0,0,0,2,45,1,
-        0,0,0,4,47,1,0,0,0,6,61,1,0,0,0,8,63,1,0,0,0,10,71,1,0,0,0,12,80,
-        1,0,0,0,14,86,1,0,0,0,16,88,1,0,0,0,18,113,1,0,0,0,20,128,1,0,0,
-        0,22,132,1,0,0,0,24,156,1,0,0,0,26,158,1,0,0,0,28,166,1,0,0,0,30,
-        32,3,2,1,0,31,33,5,28,0,0,32,31,1,0,0,0,32,33,1,0,0,0,33,35,1,0,
-        0,0,34,30,1,0,0,0,35,38,1,0,0,0,36,34,1,0,0,0,36,37,1,0,0,0,37,39,
-        1,0,0,0,38,36,1,0,0,0,39,40,5,0,0,1,40,1,1,0,0,0,41,46,3,4,2,0,42,
-        46,3,16,8,0,43,46,3,18,9,0,44,46,3,22,11,0,45,41,1,0,0,0,45,42,1,
-        0,0,0,45,43,1,0,0,0,45,44,1,0,0,0,46,3,1,0,0,0,47,48,5,2,0,0,48,
-        49,5,3,0,0,49,50,3,6,3,0,50,51,5,25,0,0,51,56,3,8,4,0,52,53,5,27,
-        0,0,53,55,3,8,4,0,54,52,1,0,0,0,55,58,1,0,0,0,56,54,1,0,0,0,56,57,
-        1,0,0,0,57,59,1,0,0,0,58,56,1,0,0,0,59,60,5,26,0,0,60,5,1,0,0,0,
-        61,62,5,36,0,0,62,7,1,0,0,0,63,64,3,10,5,0,64,68,3,12,6,0,65,67,
-        3,14,7,0,66,65,1,0,0,0,67,70,1,0,0,0,68,66,1,0,0,0,68,69,1,0,0,0,
-        69,9,1,0,0,0,70,68,1,0,0,0,71,72,5,36,0,0,72,11,1,0,0,0,73,81,5,
-        4,0,0,74,81,5,8,0,0,75,76,5,7,0,0,76,77,5,25,0,0,77,78,5,37,0,0,
-        78,81,5,26,0,0,79,81,5,11,0,0,80,73,1,0,0,0,80,74,1,0,0,0,80,75,
-        1,0,0,0,80,79,1,0,0,0,81,13,1,0,0,0,82,83,5,5,0,0,83,87,5,6,0,0,
-        84,85,5,9,0,0,85,87,5,10,0,0,86,82,1,0,0,0,86,84,1,0,0,0,87,15,1,
-        0,0,0,88,89,5,12,0,0,89,90,5,13,0,0,90,91,3,6,3,0,91,92,5,25,0,0,
-        92,97,3,10,5,0,93,94,5,27,0,0,94,96,3,10,5,0,95,93,1,0,0,0,96,99,
-        1,0,0,0,97,95,1,0,0,0,97,98,1,0,0,0,98,100,1,0,0,0,99,97,1,0,0,0,
-        100,101,5,26,0,0,101,102,5,14,0,0,102,103,5,25,0,0,103,108,3,28,
-        14,0,104,105,5,27,0,0,105,107,3,28,14,0,106,104,1,0,0,0,107,110,
-        1,0,0,0,108,106,1,0,0,0,108,109,1,0,0,0,109,111,1,0,0,0,110,108,
-        1,0,0,0,111,112,5,26,0,0,112,17,1,0,0,0,113,114,5,15,0,0,114,115,
-        3,6,3,0,115,116,5,16,0,0,116,121,3,20,10,0,117,118,5,27,0,0,118,
-        120,3,20,10,0,119,117,1,0,0,0,120,123,1,0,0,0,121,119,1,0,0,0,121,
-        122,1,0,0,0,122,126,1,0,0,0,123,121,1,0,0,0,124,125,5,17,0,0,125,
-        127,3,28,14,0,126,124,1,0,0,0,126,127,1,0,0,0,127,19,1,0,0,0,128,
-        129,3,10,5,0,129,130,5,30,0,0,130,131,3,28,14,0,131,21,1,0,0,0,132,
-        133,5,18,0,0,133,134,3,24,12,0,134,135,5,19,0,0,135,141,3,26,13,
-        0,136,137,5,20,0,0,137,138,3,26,13,0,138,139,5,21,0,0,139,140,3,
-        28,14,0,140,142,1,0,0,0,141,136,1,0,0,0,141,142,1,0,0,0,142,145,
-        1,0,0,0,143,144,5,17,0,0,144,146,3,28,14,0,145,143,1,0,0,0,145,146,
-        1,0,0,0,146,23,1,0,0,0,147,157,5,1,0,0,148,153,3,10,5,0,149,150,
-        5,27,0,0,150,152,3,10,5,0,151,149,1,0,0,0,152,155,1,0,0,0,153,151,
-        1,0,0,0,153,154,1,0,0,0,154,157,1,0,0,0,155,153,1,0,0,0,156,147,
-        1,0,0,0,156,148,1,0,0,0,157,25,1,0,0,0,158,160,5,36,0,0,159,161,
-        5,36,0,0,160,159,1,0,0,0,160,161,1,0,0,0,161,27,1,0,0,0,162,163,
-        6,14,-1,0,163,167,5,38,0,0,164,167,5,37,0,0,165,167,5,36,0,0,166,
-        162,1,0,0,0,166,164,1,0,0,0,166,165,1,0,0,0,167,188,1,0,0,0,168,
-        169,10,9,0,0,169,170,5,30,0,0,170,187,3,28,14,10,171,172,10,8,0,
-        0,172,173,5,31,0,0,173,187,3,28,14,9,174,175,10,7,0,0,175,176,5,
-        32,0,0,176,187,3,28,14,8,177,178,10,6,0,0,178,179,5,33,0,0,179,187,
-        3,28,14,7,180,181,10,5,0,0,181,182,5,34,0,0,182,187,3,28,14,6,183,
-        184,10,4,0,0,184,185,5,35,0,0,185,187,3,28,14,5,186,168,1,0,0,0,
-        186,171,1,0,0,0,186,174,1,0,0,0,186,177,1,0,0,0,186,180,1,0,0,0,
-        186,183,1,0,0,0,187,190,1,0,0,0,188,186,1,0,0,0,188,189,1,0,0,0,
-        189,29,1,0,0,0,190,188,1,0,0,0,19,32,36,45,56,68,80,86,97,108,121,
-        126,141,145,153,156,160,166,186,188
+        2,14,7,14,2,15,7,15,2,16,7,16,1,0,1,0,3,0,37,8,0,5,0,39,8,0,10,0,
+        12,0,42,9,0,1,0,1,0,1,1,1,1,1,1,1,1,3,1,50,8,1,1,2,1,2,1,2,1,2,1,
+        2,1,2,1,2,5,2,59,8,2,10,2,12,2,62,9,2,1,2,1,2,1,3,1,3,1,4,1,4,1,
+        4,5,4,71,8,4,10,4,12,4,74,9,4,1,5,1,5,1,6,1,6,1,6,1,6,1,6,1,6,1,
+        6,3,6,85,8,6,1,7,1,7,1,7,1,7,3,7,91,8,7,1,8,1,8,1,8,1,8,1,8,1,8,
+        1,8,5,8,100,8,8,10,8,12,8,103,9,8,1,8,1,8,1,8,1,8,1,8,1,8,5,8,111,
+        8,8,10,8,12,8,114,9,8,1,8,1,8,1,8,1,8,1,8,1,8,5,8,122,8,8,10,8,12,
+        8,125,9,8,1,8,1,8,5,8,129,8,8,10,8,12,8,132,9,8,1,9,1,9,1,9,1,9,
+        1,9,1,9,5,9,140,8,9,10,9,12,9,143,9,9,1,9,1,9,3,9,147,8,9,1,10,1,
+        10,1,10,1,10,1,11,1,11,1,11,1,11,1,11,3,11,158,8,11,1,11,1,11,3,
+        11,162,8,11,1,12,3,12,165,8,12,1,12,1,12,1,12,1,12,1,12,1,13,1,13,
+        1,13,1,13,5,13,176,8,13,10,13,12,13,179,9,13,3,13,181,8,13,1,14,
+        1,14,3,14,185,8,14,1,14,1,14,1,15,1,15,3,15,191,8,15,1,16,1,16,1,
+        16,1,16,1,16,1,16,1,16,3,16,200,8,16,1,16,1,16,1,16,1,16,1,16,1,
+        16,1,16,1,16,1,16,1,16,1,16,1,16,1,16,1,16,1,16,1,16,1,16,1,16,1,
+        16,1,16,1,16,1,16,1,16,1,16,5,16,226,8,16,10,16,12,16,229,9,16,1,
+        16,0,1,32,17,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,0,1,1,
+        0,22,24,248,0,40,1,0,0,0,2,49,1,0,0,0,4,51,1,0,0,0,6,65,1,0,0,0,
+        8,67,1,0,0,0,10,75,1,0,0,0,12,84,1,0,0,0,14,90,1,0,0,0,16,92,1,0,
+        0,0,18,133,1,0,0,0,20,148,1,0,0,0,22,152,1,0,0,0,24,164,1,0,0,0,
+        26,180,1,0,0,0,28,184,1,0,0,0,30,188,1,0,0,0,32,199,1,0,0,0,34,36,
+        3,2,1,0,35,37,5,30,0,0,36,35,1,0,0,0,36,37,1,0,0,0,37,39,1,0,0,0,
+        38,34,1,0,0,0,39,42,1,0,0,0,40,38,1,0,0,0,40,41,1,0,0,0,41,43,1,
+        0,0,0,42,40,1,0,0,0,43,44,5,0,0,1,44,1,1,0,0,0,45,50,3,4,2,0,46,
+        50,3,16,8,0,47,50,3,18,9,0,48,50,3,22,11,0,49,45,1,0,0,0,49,46,1,
+        0,0,0,49,47,1,0,0,0,49,48,1,0,0,0,50,3,1,0,0,0,51,52,5,2,0,0,52,
+        53,5,3,0,0,53,54,3,6,3,0,54,55,5,27,0,0,55,60,3,8,4,0,56,57,5,29,
+        0,0,57,59,3,8,4,0,58,56,1,0,0,0,59,62,1,0,0,0,60,58,1,0,0,0,60,61,
+        1,0,0,0,61,63,1,0,0,0,62,60,1,0,0,0,63,64,5,28,0,0,64,5,1,0,0,0,
+        65,66,5,38,0,0,66,7,1,0,0,0,67,68,3,10,5,0,68,72,3,12,6,0,69,71,
+        3,14,7,0,70,69,1,0,0,0,71,74,1,0,0,0,72,70,1,0,0,0,72,73,1,0,0,0,
+        73,9,1,0,0,0,74,72,1,0,0,0,75,76,5,38,0,0,76,11,1,0,0,0,77,85,5,
+        4,0,0,78,85,5,8,0,0,79,80,5,7,0,0,80,81,5,27,0,0,81,82,5,39,0,0,
+        82,85,5,28,0,0,83,85,5,11,0,0,84,77,1,0,0,0,84,78,1,0,0,0,84,79,
+        1,0,0,0,84,83,1,0,0,0,85,13,1,0,0,0,86,87,5,5,0,0,87,91,5,6,0,0,
+        88,89,5,9,0,0,89,91,5,10,0,0,90,86,1,0,0,0,90,88,1,0,0,0,91,15,1,
+        0,0,0,92,93,5,12,0,0,93,94,5,13,0,0,94,95,3,6,3,0,95,96,5,27,0,0,
+        96,101,3,10,5,0,97,98,5,29,0,0,98,100,3,10,5,0,99,97,1,0,0,0,100,
+        103,1,0,0,0,101,99,1,0,0,0,101,102,1,0,0,0,102,104,1,0,0,0,103,101,
+        1,0,0,0,104,105,5,28,0,0,105,106,5,14,0,0,106,107,5,27,0,0,107,112,
+        3,32,16,0,108,109,5,29,0,0,109,111,3,32,16,0,110,108,1,0,0,0,111,
+        114,1,0,0,0,112,110,1,0,0,0,112,113,1,0,0,0,113,115,1,0,0,0,114,
+        112,1,0,0,0,115,130,5,28,0,0,116,117,5,29,0,0,117,118,5,27,0,0,118,
+        123,3,32,16,0,119,120,5,29,0,0,120,122,3,32,16,0,121,119,1,0,0,0,
+        122,125,1,0,0,0,123,121,1,0,0,0,123,124,1,0,0,0,124,126,1,0,0,0,
+        125,123,1,0,0,0,126,127,5,28,0,0,127,129,1,0,0,0,128,116,1,0,0,0,
+        129,132,1,0,0,0,130,128,1,0,0,0,130,131,1,0,0,0,131,17,1,0,0,0,132,
+        130,1,0,0,0,133,134,5,15,0,0,134,135,3,6,3,0,135,136,5,16,0,0,136,
+        141,3,20,10,0,137,138,5,29,0,0,138,140,3,20,10,0,139,137,1,0,0,0,
+        140,143,1,0,0,0,141,139,1,0,0,0,141,142,1,0,0,0,142,146,1,0,0,0,
+        143,141,1,0,0,0,144,145,5,17,0,0,145,147,3,32,16,0,146,144,1,0,0,
+        0,146,147,1,0,0,0,147,19,1,0,0,0,148,149,3,10,5,0,149,150,5,32,0,
+        0,150,151,3,32,16,0,151,21,1,0,0,0,152,153,5,18,0,0,153,154,3,26,
+        13,0,154,155,5,19,0,0,155,157,3,30,15,0,156,158,3,24,12,0,157,156,
+        1,0,0,0,157,158,1,0,0,0,158,161,1,0,0,0,159,160,5,17,0,0,160,162,
+        3,32,16,0,161,159,1,0,0,0,161,162,1,0,0,0,162,23,1,0,0,0,163,165,
+        7,0,0,0,164,163,1,0,0,0,164,165,1,0,0,0,165,166,1,0,0,0,166,167,
+        5,20,0,0,167,168,3,30,15,0,168,169,5,21,0,0,169,170,3,32,16,0,170,
+        25,1,0,0,0,171,181,5,1,0,0,172,177,3,28,14,0,173,174,5,29,0,0,174,
+        176,3,28,14,0,175,173,1,0,0,0,176,179,1,0,0,0,177,175,1,0,0,0,177,
+        178,1,0,0,0,178,181,1,0,0,0,179,177,1,0,0,0,180,171,1,0,0,0,180,
+        172,1,0,0,0,181,27,1,0,0,0,182,183,5,38,0,0,183,185,5,31,0,0,184,
+        182,1,0,0,0,184,185,1,0,0,0,185,186,1,0,0,0,186,187,5,38,0,0,187,
+        29,1,0,0,0,188,190,5,38,0,0,189,191,5,38,0,0,190,189,1,0,0,0,190,
+        191,1,0,0,0,191,31,1,0,0,0,192,193,6,16,-1,0,193,194,5,38,0,0,194,
+        195,5,31,0,0,195,200,5,38,0,0,196,200,5,40,0,0,197,200,5,39,0,0,
+        198,200,5,38,0,0,199,192,1,0,0,0,199,196,1,0,0,0,199,197,1,0,0,0,
+        199,198,1,0,0,0,200,227,1,0,0,0,201,202,10,12,0,0,202,203,5,25,0,
+        0,203,226,3,32,16,13,204,205,10,11,0,0,205,206,5,26,0,0,206,226,
+        3,32,16,12,207,208,10,10,0,0,208,209,5,32,0,0,209,226,3,32,16,11,
+        210,211,10,9,0,0,211,212,5,33,0,0,212,226,3,32,16,10,213,214,10,
+        8,0,0,214,215,5,34,0,0,215,226,3,32,16,9,216,217,10,7,0,0,217,218,
+        5,35,0,0,218,226,3,32,16,8,219,220,10,6,0,0,220,221,5,36,0,0,221,
+        226,3,32,16,7,222,223,10,5,0,0,223,224,5,37,0,0,224,226,3,32,16,
+        6,225,201,1,0,0,0,225,204,1,0,0,0,225,207,1,0,0,0,225,210,1,0,0,
+        0,225,213,1,0,0,0,225,216,1,0,0,0,225,219,1,0,0,0,225,222,1,0,0,
+        0,226,229,1,0,0,0,227,225,1,0,0,0,227,228,1,0,0,0,228,33,1,0,0,0,
+        229,227,1,0,0,0,23,36,40,49,60,72,84,90,101,112,123,130,141,146,
+        157,161,164,177,180,184,190,199,225,227
     ]
 
 class SQLParser ( Parser ):
@@ -92,17 +107,17 @@ class SQLParser ( Parser ):
                      "'PRIMARY'", "'KEY'", "'VARCHAR'", "'INTEGER'", "'NOT'", 
                      "'NULL'", "'DATE'", "'INSERT'", "'INTO'", "'VALUES'", 
                      "'UPDATE'", "'SET'", "'WHERE'", "'SELECT'", "'FROM'", 
-                     "'JOIN'", "'ON'", "'INNER'", "'LEFT'", "'RIGHT'", "'('", 
-                     "')'", "','", "';'", "'.'", "'='", "'>'", "'<'", "'>='", 
-                     "'<='", "'<>'" ]
+                     "'JOIN'", "'ON'", "'INNER'", "'LEFT'", "'RIGHT'", "'AND'", 
+                     "'OR'", "'('", "')'", "','", "';'", "'.'", "'='", "'>'", 
+                     "'<'", "'>='", "'<='", "'<>'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "CREATE", "TABLE", "SERIAL", 
                       "PRIMARY", "KEY", "VARCHAR", "INTEGER", "NOT", "NULL", 
                       "DATE", "INSERT", "INTO", "VALUES", "UPDATE", "SET", 
                       "WHERE", "SELECT", "FROM", "JOIN", "ON", "INNER", 
-                      "LEFT", "RIGHT", "LPAREN", "RPAREN", "COMMA", "SEMI", 
-                      "DOT", "EQ", "GT", "LT", "GE", "LE", "NE", "ID", "NUM", 
-                      "STRING", "WS" ]
+                      "LEFT", "RIGHT", "AND", "OR", "LPAREN", "RPAREN", 
+                      "COMMA", "SEMI", "DOT", "EQ", "GT", "LT", "GE", "LE", 
+                      "NE", "ID", "NUM", "STRING", "WS" ]
 
     RULE_root = 0
     RULE_sqlStmt = 1
@@ -116,14 +131,16 @@ class SQLParser ( Parser ):
     RULE_updateStmt = 9
     RULE_setClause = 10
     RULE_selectStmt = 11
-    RULE_selectList = 12
-    RULE_tableRef = 13
-    RULE_expr = 14
+    RULE_joinClause = 12
+    RULE_selectList = 13
+    RULE_selectItem = 14
+    RULE_tableRef = 15
+    RULE_expr = 16
 
     ruleNames =  [ "root", "sqlStmt", "createTableStmt", "tableName", "columnDef", 
                    "columnName", "dataType", "columnConstraint", "insertStmt", 
-                   "updateStmt", "setClause", "selectStmt", "selectList", 
-                   "tableRef", "expr" ]
+                   "updateStmt", "setClause", "selectStmt", "joinClause", 
+                   "selectList", "selectItem", "tableRef", "expr" ]
 
     EOF = Token.EOF
     T__0=1
@@ -150,21 +167,23 @@ class SQLParser ( Parser ):
     INNER=22
     LEFT=23
     RIGHT=24
-    LPAREN=25
-    RPAREN=26
-    COMMA=27
-    SEMI=28
-    DOT=29
-    EQ=30
-    GT=31
-    LT=32
-    GE=33
-    LE=34
-    NE=35
-    ID=36
-    NUM=37
-    STRING=38
-    WS=39
+    AND=25
+    OR=26
+    LPAREN=27
+    RPAREN=28
+    COMMA=29
+    SEMI=30
+    DOT=31
+    EQ=32
+    GT=33
+    LT=34
+    GE=35
+    LE=36
+    NE=37
+    ID=38
+    NUM=39
+    STRING=40
+    WS=41
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -209,12 +228,6 @@ class SQLParser ( Parser ):
             if hasattr( listener, "exitRoot" ):
                 listener.exitRoot(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRoot" ):
-                return visitor.visitRoot(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -225,25 +238,25 @@ class SQLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 36
+            self.state = 40
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & 299012) != 0):
-                self.state = 30
+                self.state = 34
                 self.sqlStmt()
-                self.state = 32
+                self.state = 36
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==28:
-                    self.state = 31
+                if _la==30:
+                    self.state = 35
                     self.match(SQLParser.SEMI)
 
 
-                self.state = 38
+                self.state = 42
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 39
+            self.state = 43
             self.match(SQLParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
@@ -288,12 +301,6 @@ class SQLParser ( Parser ):
             if hasattr( listener, "exitSqlStmt" ):
                 listener.exitSqlStmt(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSqlStmt" ):
-                return visitor.visitSqlStmt(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -302,27 +309,27 @@ class SQLParser ( Parser ):
         localctx = SQLParser.SqlStmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_sqlStmt)
         try:
-            self.state = 45
+            self.state = 49
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [2]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 41
+                self.state = 45
                 self.createTableStmt()
                 pass
             elif token in [12]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 42
+                self.state = 46
                 self.insertStmt()
                 pass
             elif token in [15]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 43
+                self.state = 47
                 self.updateStmt()
                 pass
             elif token in [18]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 44
+                self.state = 48
                 self.selectStmt()
                 pass
             else:
@@ -384,12 +391,6 @@ class SQLParser ( Parser ):
             if hasattr( listener, "exitCreateTableStmt" ):
                 listener.exitCreateTableStmt(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCreateTableStmt" ):
-                return visitor.visitCreateTableStmt(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -400,29 +401,29 @@ class SQLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 47
-            self.match(SQLParser.CREATE)
-            self.state = 48
-            self.match(SQLParser.TABLE)
-            self.state = 49
-            self.tableName()
-            self.state = 50
-            self.match(SQLParser.LPAREN)
             self.state = 51
+            self.match(SQLParser.CREATE)
+            self.state = 52
+            self.match(SQLParser.TABLE)
+            self.state = 53
+            self.tableName()
+            self.state = 54
+            self.match(SQLParser.LPAREN)
+            self.state = 55
             self.columnDef()
-            self.state = 56
+            self.state = 60
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==27:
-                self.state = 52
+            while _la==29:
+                self.state = 56
                 self.match(SQLParser.COMMA)
-                self.state = 53
+                self.state = 57
                 self.columnDef()
-                self.state = 58
+                self.state = 62
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 59
+            self.state = 63
             self.match(SQLParser.RPAREN)
         except RecognitionException as re:
             localctx.exception = re
@@ -454,12 +455,6 @@ class SQLParser ( Parser ):
             if hasattr( listener, "exitTableName" ):
                 listener.exitTableName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTableName" ):
-                return visitor.visitTableName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -469,7 +464,7 @@ class SQLParser ( Parser ):
         self.enterRule(localctx, 6, self.RULE_tableName)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 61
+            self.state = 65
             self.match(SQLParser.ID)
         except RecognitionException as re:
             localctx.exception = re
@@ -513,12 +508,6 @@ class SQLParser ( Parser ):
             if hasattr( listener, "exitColumnDef" ):
                 listener.exitColumnDef(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitColumnDef" ):
-                return visitor.visitColumnDef(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -529,17 +518,17 @@ class SQLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 63
+            self.state = 67
             self.columnName()
-            self.state = 64
-            self.dataType()
             self.state = 68
+            self.dataType()
+            self.state = 72
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==5 or _la==9:
-                self.state = 65
+                self.state = 69
                 self.columnConstraint()
-                self.state = 70
+                self.state = 74
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -573,12 +562,6 @@ class SQLParser ( Parser ):
             if hasattr( listener, "exitColumnName" ):
                 listener.exitColumnName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitColumnName" ):
-                return visitor.visitColumnName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -588,7 +571,7 @@ class SQLParser ( Parser ):
         self.enterRule(localctx, 10, self.RULE_columnName)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 71
+            self.state = 75
             self.match(SQLParser.ID)
         except RecognitionException as re:
             localctx.exception = re
@@ -638,12 +621,6 @@ class SQLParser ( Parser ):
             if hasattr( listener, "exitDataType" ):
                 listener.exitDataType(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDataType" ):
-                return visitor.visitDataType(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -652,33 +629,33 @@ class SQLParser ( Parser ):
         localctx = SQLParser.DataTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_dataType)
         try:
-            self.state = 80
+            self.state = 84
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [4]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 73
+                self.state = 77
                 self.match(SQLParser.SERIAL)
                 pass
             elif token in [8]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 74
+                self.state = 78
                 self.match(SQLParser.INTEGER)
                 pass
             elif token in [7]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 75
+                self.state = 79
                 self.match(SQLParser.VARCHAR)
-                self.state = 76
+                self.state = 80
                 self.match(SQLParser.LPAREN)
-                self.state = 77
+                self.state = 81
                 self.match(SQLParser.NUM)
-                self.state = 78
+                self.state = 82
                 self.match(SQLParser.RPAREN)
                 pass
             elif token in [11]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 79
+                self.state = 83
                 self.match(SQLParser.DATE)
                 pass
             else:
@@ -723,12 +700,6 @@ class SQLParser ( Parser ):
             if hasattr( listener, "exitColumnConstraint" ):
                 listener.exitColumnConstraint(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitColumnConstraint" ):
-                return visitor.visitColumnConstraint(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -737,21 +708,21 @@ class SQLParser ( Parser ):
         localctx = SQLParser.ColumnConstraintContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_columnConstraint)
         try:
-            self.state = 86
+            self.state = 90
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [5]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 82
+                self.state = 86
                 self.match(SQLParser.PRIMARY)
-                self.state = 83
+                self.state = 87
                 self.match(SQLParser.KEY)
                 pass
             elif token in [9]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 84
+                self.state = 88
                 self.match(SQLParser.NOT)
-                self.state = 85
+                self.state = 89
                 self.match(SQLParser.NULL)
                 pass
             else:
@@ -829,12 +800,6 @@ class SQLParser ( Parser ):
             if hasattr( listener, "exitInsertStmt" ):
                 listener.exitInsertStmt(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInsertStmt" ):
-                return visitor.visitInsertStmt(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -845,50 +810,78 @@ class SQLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 88
-            self.match(SQLParser.INSERT)
-            self.state = 89
-            self.match(SQLParser.INTO)
-            self.state = 90
-            self.tableName()
-            self.state = 91
-            self.match(SQLParser.LPAREN)
             self.state = 92
-            self.columnName()
-            self.state = 97
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==27:
-                self.state = 93
-                self.match(SQLParser.COMMA)
-                self.state = 94
-                self.columnName()
-                self.state = 99
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
-            self.state = 100
-            self.match(SQLParser.RPAREN)
-            self.state = 101
-            self.match(SQLParser.VALUES)
-            self.state = 102
+            self.match(SQLParser.INSERT)
+            self.state = 93
+            self.match(SQLParser.INTO)
+            self.state = 94
+            self.tableName()
+            self.state = 95
             self.match(SQLParser.LPAREN)
-            self.state = 103
-            self.expr(0)
-            self.state = 108
+            self.state = 96
+            self.columnName()
+            self.state = 101
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==27:
-                self.state = 104
+            while _la==29:
+                self.state = 97
                 self.match(SQLParser.COMMA)
-                self.state = 105
-                self.expr(0)
-                self.state = 110
+                self.state = 98
+                self.columnName()
+                self.state = 103
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 111
+            self.state = 104
             self.match(SQLParser.RPAREN)
+            self.state = 105
+            self.match(SQLParser.VALUES)
+            self.state = 106
+            self.match(SQLParser.LPAREN)
+            self.state = 107
+            self.expr(0)
+            self.state = 112
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==29:
+                self.state = 108
+                self.match(SQLParser.COMMA)
+                self.state = 109
+                self.expr(0)
+                self.state = 114
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
+            self.state = 115
+            self.match(SQLParser.RPAREN)
+            self.state = 130
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==29:
+                self.state = 116
+                self.match(SQLParser.COMMA)
+                self.state = 117
+                self.match(SQLParser.LPAREN)
+                self.state = 118
+                self.expr(0)
+                self.state = 123
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                while _la==29:
+                    self.state = 119
+                    self.match(SQLParser.COMMA)
+                    self.state = 120
+                    self.expr(0)
+                    self.state = 125
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+
+                self.state = 126
+                self.match(SQLParser.RPAREN)
+                self.state = 132
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -946,12 +939,6 @@ class SQLParser ( Parser ):
             if hasattr( listener, "exitUpdateStmt" ):
                 listener.exitUpdateStmt(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUpdateStmt" ):
-                return visitor.visitUpdateStmt(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -962,33 +949,33 @@ class SQLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 113
+            self.state = 133
             self.match(SQLParser.UPDATE)
-            self.state = 114
+            self.state = 134
             self.tableName()
-            self.state = 115
+            self.state = 135
             self.match(SQLParser.SET)
-            self.state = 116
+            self.state = 136
             self.setClause()
-            self.state = 121
+            self.state = 141
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==27:
-                self.state = 117
+            while _la==29:
+                self.state = 137
                 self.match(SQLParser.COMMA)
-                self.state = 118
+                self.state = 138
                 self.setClause()
-                self.state = 123
+                self.state = 143
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 126
+            self.state = 146
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==17:
-                self.state = 124
+                self.state = 144
                 self.match(SQLParser.WHERE)
-                self.state = 125
+                self.state = 145
                 self.expr(0)
 
 
@@ -1030,12 +1017,6 @@ class SQLParser ( Parser ):
             if hasattr( listener, "exitSetClause" ):
                 listener.exitSetClause(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSetClause" ):
-                return visitor.visitSetClause(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -1045,11 +1026,11 @@ class SQLParser ( Parser ):
         self.enterRule(localctx, 20, self.RULE_setClause)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 128
+            self.state = 148
             self.columnName()
-            self.state = 129
+            self.state = 149
             self.match(SQLParser.EQ)
-            self.state = 130
+            self.state = 150
             self.expr(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -1077,28 +1058,20 @@ class SQLParser ( Parser ):
         def FROM(self):
             return self.getToken(SQLParser.FROM, 0)
 
-        def tableRef(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(SQLParser.TableRefContext)
-            else:
-                return self.getTypedRuleContext(SQLParser.TableRefContext,i)
+        def tableRef(self):
+            return self.getTypedRuleContext(SQLParser.TableRefContext,0)
 
 
-        def JOIN(self):
-            return self.getToken(SQLParser.JOIN, 0)
-
-        def ON(self):
-            return self.getToken(SQLParser.ON, 0)
-
-        def expr(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(SQLParser.ExprContext)
-            else:
-                return self.getTypedRuleContext(SQLParser.ExprContext,i)
+        def joinClause(self):
+            return self.getTypedRuleContext(SQLParser.JoinClauseContext,0)
 
 
         def WHERE(self):
             return self.getToken(SQLParser.WHERE, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(SQLParser.ExprContext,0)
+
 
         def getRuleIndex(self):
             return SQLParser.RULE_selectStmt
@@ -1111,12 +1084,6 @@ class SQLParser ( Parser ):
             if hasattr( listener, "exitSelectStmt" ):
                 listener.exitSelectStmt(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSelectStmt" ):
-                return visitor.visitSelectStmt(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -1127,38 +1094,113 @@ class SQLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 132
+            self.state = 152
             self.match(SQLParser.SELECT)
-            self.state = 133
+            self.state = 153
             self.selectList()
-            self.state = 134
+            self.state = 154
             self.match(SQLParser.FROM)
-            self.state = 135
+            self.state = 155
             self.tableRef()
-            self.state = 141
+            self.state = 157
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==20:
-                self.state = 136
-                self.match(SQLParser.JOIN)
-                self.state = 137
-                self.tableRef()
-                self.state = 138
-                self.match(SQLParser.ON)
-                self.state = 139
-                self.expr(0)
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 30408704) != 0):
+                self.state = 156
+                self.joinClause()
 
 
-            self.state = 145
+            self.state = 161
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==17:
-                self.state = 143
+                self.state = 159
                 self.match(SQLParser.WHERE)
-                self.state = 144
+                self.state = 160
                 self.expr(0)
 
 
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class JoinClauseContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def JOIN(self):
+            return self.getToken(SQLParser.JOIN, 0)
+
+        def tableRef(self):
+            return self.getTypedRuleContext(SQLParser.TableRefContext,0)
+
+
+        def ON(self):
+            return self.getToken(SQLParser.ON, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(SQLParser.ExprContext,0)
+
+
+        def INNER(self):
+            return self.getToken(SQLParser.INNER, 0)
+
+        def LEFT(self):
+            return self.getToken(SQLParser.LEFT, 0)
+
+        def RIGHT(self):
+            return self.getToken(SQLParser.RIGHT, 0)
+
+        def getRuleIndex(self):
+            return SQLParser.RULE_joinClause
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterJoinClause" ):
+                listener.enterJoinClause(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitJoinClause" ):
+                listener.exitJoinClause(self)
+
+
+
+
+    def joinClause(self):
+
+        localctx = SQLParser.JoinClauseContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 24, self.RULE_joinClause)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 164
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 29360128) != 0):
+                self.state = 163
+                _la = self._input.LA(1)
+                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 29360128) != 0)):
+                    self._errHandler.recoverInline(self)
+                else:
+                    self._errHandler.reportMatch(self)
+                    self.consume()
+
+
+            self.state = 166
+            self.match(SQLParser.JOIN)
+            self.state = 167
+            self.tableRef()
+            self.state = 168
+            self.match(SQLParser.ON)
+            self.state = 169
+            self.expr(0)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1175,11 +1217,11 @@ class SQLParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def columnName(self, i:int=None):
+        def selectItem(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(SQLParser.ColumnNameContext)
+                return self.getTypedRuleContexts(SQLParser.SelectItemContext)
             else:
-                return self.getTypedRuleContext(SQLParser.ColumnNameContext,i)
+                return self.getTypedRuleContext(SQLParser.SelectItemContext,i)
 
 
         def COMMA(self, i:int=None):
@@ -1199,42 +1241,36 @@ class SQLParser ( Parser ):
             if hasattr( listener, "exitSelectList" ):
                 listener.exitSelectList(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSelectList" ):
-                return visitor.visitSelectList(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
     def selectList(self):
 
         localctx = SQLParser.SelectListContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 24, self.RULE_selectList)
+        self.enterRule(localctx, 26, self.RULE_selectList)
         self._la = 0 # Token type
         try:
-            self.state = 156
+            self.state = 180
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [1]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 147
+                self.state = 171
                 self.match(SQLParser.T__0)
                 pass
-            elif token in [36]:
+            elif token in [38]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 148
-                self.columnName()
-                self.state = 153
+                self.state = 172
+                self.selectItem()
+                self.state = 177
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==27:
-                    self.state = 149
+                while _la==29:
+                    self.state = 173
                     self.match(SQLParser.COMMA)
-                    self.state = 150
-                    self.columnName()
-                    self.state = 155
+                    self.state = 174
+                    self.selectItem()
+                    self.state = 179
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
@@ -1242,6 +1278,63 @@ class SQLParser ( Parser ):
             else:
                 raise NoViableAltException(self)
 
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class SelectItemContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ID(self, i:int=None):
+            if i is None:
+                return self.getTokens(SQLParser.ID)
+            else:
+                return self.getToken(SQLParser.ID, i)
+
+        def DOT(self):
+            return self.getToken(SQLParser.DOT, 0)
+
+        def getRuleIndex(self):
+            return SQLParser.RULE_selectItem
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSelectItem" ):
+                listener.enterSelectItem(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSelectItem" ):
+                listener.exitSelectItem(self)
+
+
+
+
+    def selectItem(self):
+
+        localctx = SQLParser.SelectItemContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 28, self.RULE_selectItem)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 184
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
+            if la_ == 1:
+                self.state = 182
+                self.match(SQLParser.ID)
+                self.state = 183
+                self.match(SQLParser.DOT)
+
+
+            self.state = 186
+            self.match(SQLParser.ID)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1275,29 +1368,23 @@ class SQLParser ( Parser ):
             if hasattr( listener, "exitTableRef" ):
                 listener.exitTableRef(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTableRef" ):
-                return visitor.visitTableRef(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
     def tableRef(self):
 
         localctx = SQLParser.TableRefContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_tableRef)
+        self.enterRule(localctx, 30, self.RULE_tableRef)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 158
+            self.state = 188
             self.match(SQLParser.ID)
-            self.state = 160
+            self.state = 190
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==36:
-                self.state = 159
+            if _la==38:
+                self.state = 189
                 self.match(SQLParser.ID)
 
 
@@ -1317,14 +1404,20 @@ class SQLParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
+        def ID(self, i:int=None):
+            if i is None:
+                return self.getTokens(SQLParser.ID)
+            else:
+                return self.getToken(SQLParser.ID, i)
+
+        def DOT(self):
+            return self.getToken(SQLParser.DOT, 0)
+
         def STRING(self):
             return self.getToken(SQLParser.STRING, 0)
 
         def NUM(self):
             return self.getToken(SQLParser.NUM, 0)
-
-        def ID(self):
-            return self.getToken(SQLParser.ID, 0)
 
         def expr(self, i:int=None):
             if i is None:
@@ -1332,6 +1425,12 @@ class SQLParser ( Parser ):
             else:
                 return self.getTypedRuleContext(SQLParser.ExprContext,i)
 
+
+        def AND(self):
+            return self.getToken(SQLParser.AND, 0)
+
+        def OR(self):
+            return self.getToken(SQLParser.OR, 0)
 
         def EQ(self):
             return self.getToken(SQLParser.EQ, 0)
@@ -1362,12 +1461,6 @@ class SQLParser ( Parser ):
             if hasattr( listener, "exitExpr" ):
                 listener.exitExpr(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpr" ):
-                return visitor.visitExpr(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
     def expr(self, _p:int=0):
@@ -1375,122 +1468,158 @@ class SQLParser ( Parser ):
         _parentState = self.state
         localctx = SQLParser.ExprContext(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 28
-        self.enterRecursionRule(localctx, 28, self.RULE_expr, _p)
+        _startState = 32
+        self.enterRecursionRule(localctx, 32, self.RULE_expr, _p)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 166
+            self.state = 199
             self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [38]:
-                self.state = 163
-                self.match(SQLParser.STRING)
-                pass
-            elif token in [37]:
-                self.state = 164
-                self.match(SQLParser.NUM)
-                pass
-            elif token in [36]:
-                self.state = 165
+            la_ = self._interp.adaptivePredict(self._input,20,self._ctx)
+            if la_ == 1:
+                self.state = 193
+                self.match(SQLParser.ID)
+                self.state = 194
+                self.match(SQLParser.DOT)
+                self.state = 195
                 self.match(SQLParser.ID)
                 pass
-            else:
-                raise NoViableAltException(self)
+
+            elif la_ == 2:
+                self.state = 196
+                self.match(SQLParser.STRING)
+                pass
+
+            elif la_ == 3:
+                self.state = 197
+                self.match(SQLParser.NUM)
+                pass
+
+            elif la_ == 4:
+                self.state = 198
+                self.match(SQLParser.ID)
+                pass
+
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 188
+            self.state = 227
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,18,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,22,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 186
+                    self.state = 225
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,17,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input,21,self._ctx)
                     if la_ == 1:
                         localctx = SQLParser.ExprContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 168
-                        if not self.precpred(self._ctx, 9):
+                        self.state = 201
+                        if not self.precpred(self._ctx, 12):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 9)")
-                        self.state = 169
-                        self.match(SQLParser.EQ)
-                        self.state = 170
-                        self.expr(10)
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 12)")
+                        self.state = 202
+                        self.match(SQLParser.AND)
+                        self.state = 203
+                        self.expr(13)
                         pass
 
                     elif la_ == 2:
                         localctx = SQLParser.ExprContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 171
-                        if not self.precpred(self._ctx, 8):
+                        self.state = 204
+                        if not self.precpred(self._ctx, 11):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 8)")
-                        self.state = 172
-                        self.match(SQLParser.GT)
-                        self.state = 173
-                        self.expr(9)
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 11)")
+                        self.state = 205
+                        self.match(SQLParser.OR)
+                        self.state = 206
+                        self.expr(12)
                         pass
 
                     elif la_ == 3:
                         localctx = SQLParser.ExprContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 174
-                        if not self.precpred(self._ctx, 7):
+                        self.state = 207
+                        if not self.precpred(self._ctx, 10):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 7)")
-                        self.state = 175
-                        self.match(SQLParser.LT)
-                        self.state = 176
-                        self.expr(8)
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 10)")
+                        self.state = 208
+                        self.match(SQLParser.EQ)
+                        self.state = 209
+                        self.expr(11)
                         pass
 
                     elif la_ == 4:
                         localctx = SQLParser.ExprContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 177
-                        if not self.precpred(self._ctx, 6):
+                        self.state = 210
+                        if not self.precpred(self._ctx, 9):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 6)")
-                        self.state = 178
-                        self.match(SQLParser.GE)
-                        self.state = 179
-                        self.expr(7)
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 9)")
+                        self.state = 211
+                        self.match(SQLParser.GT)
+                        self.state = 212
+                        self.expr(10)
                         pass
 
                     elif la_ == 5:
                         localctx = SQLParser.ExprContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 180
-                        if not self.precpred(self._ctx, 5):
+                        self.state = 213
+                        if not self.precpred(self._ctx, 8):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
-                        self.state = 181
-                        self.match(SQLParser.LE)
-                        self.state = 182
-                        self.expr(6)
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 8)")
+                        self.state = 214
+                        self.match(SQLParser.LT)
+                        self.state = 215
+                        self.expr(9)
                         pass
 
                     elif la_ == 6:
                         localctx = SQLParser.ExprContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 183
-                        if not self.precpred(self._ctx, 4):
+                        self.state = 216
+                        if not self.precpred(self._ctx, 7):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
-                        self.state = 184
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 7)")
+                        self.state = 217
+                        self.match(SQLParser.GE)
+                        self.state = 218
+                        self.expr(8)
+                        pass
+
+                    elif la_ == 7:
+                        localctx = SQLParser.ExprContext(self, _parentctx, _parentState)
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 219
+                        if not self.precpred(self._ctx, 6):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 6)")
+                        self.state = 220
+                        self.match(SQLParser.LE)
+                        self.state = 221
+                        self.expr(7)
+                        pass
+
+                    elif la_ == 8:
+                        localctx = SQLParser.ExprContext(self, _parentctx, _parentState)
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 222
+                        if not self.precpred(self._ctx, 5):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
+                        self.state = 223
                         self.match(SQLParser.NE)
-                        self.state = 185
-                        self.expr(5)
+                        self.state = 224
+                        self.expr(6)
                         pass
 
              
-                self.state = 190
+                self.state = 229
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,18,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,22,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1505,7 +1634,7 @@ class SQLParser ( Parser ):
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
         if self._predicates == None:
             self._predicates = dict()
-        self._predicates[14] = self.expr_sempred
+        self._predicates[16] = self.expr_sempred
         pred = self._predicates.get(ruleIndex, None)
         if pred is None:
             raise Exception("No predicate with index:" + str(ruleIndex))
@@ -1514,27 +1643,35 @@ class SQLParser ( Parser ):
 
     def expr_sempred(self, localctx:ExprContext, predIndex:int):
             if predIndex == 0:
-                return self.precpred(self._ctx, 9)
+                return self.precpred(self._ctx, 12)
          
 
             if predIndex == 1:
-                return self.precpred(self._ctx, 8)
+                return self.precpred(self._ctx, 11)
          
 
             if predIndex == 2:
-                return self.precpred(self._ctx, 7)
+                return self.precpred(self._ctx, 10)
          
 
             if predIndex == 3:
-                return self.precpred(self._ctx, 6)
+                return self.precpred(self._ctx, 9)
          
 
             if predIndex == 4:
-                return self.precpred(self._ctx, 5)
+                return self.precpred(self._ctx, 8)
          
 
             if predIndex == 5:
-                return self.precpred(self._ctx, 4)
+                return self.precpred(self._ctx, 7)
+         
+
+            if predIndex == 6:
+                return self.precpred(self._ctx, 6)
+         
+
+            if predIndex == 7:
+                return self.precpred(self._ctx, 5)
          
 
 
