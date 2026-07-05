@@ -1,7 +1,5 @@
 grammar Expr;
 
-// Número de control: 21031117  (cambia por el tuyo)
-
 root: classDef;
 
 classDef: 'public' 'class' ID '{' methodDef '}';
@@ -17,23 +15,17 @@ assignment: ID '=' expr ';';
 
 printStmt: 'System.out.println' '(' printArg ')' ';';
 
-printArg:
-	CADENA ('+' expr)? // "texto" + variable
-	| expr; // solo expresión
+printArg: CADENA ('+' expr)? | expr;
 
-expr:
-	expr SUMA expr // suma
-	| expr RESTA expr // resta
-	| NUM
-	| ID;
+expr: expr SUMA expr | expr RESTA expr | NUM | ID;
 
-// ---------- LÉXICO (EN ESPAÑOL) ----------
+// palabras clave
 PUBLIC: 'public';
 CLASS: 'class';
 STATIC: 'static';
 VOID: 'void';
 MAIN: 'main';
-STRING: 'String'; // tipo de dato
+STRING: 'String';
 INT: 'int';
 SYSTEM: 'System';
 OUT: 'out';
@@ -41,7 +33,7 @@ PRINTLN: 'println';
 
 ID: [a-zA-Z_][a-zA-Z0-9_]*;
 NUM: [0-9]+;
-CADENA: '"' .*? '"'; // texto entre comillas dobles (ej: "Hola")
+CADENA: '"' .*? '"';
 
 SUMA: '+';
 RESTA: '-';

@@ -1,8 +1,8 @@
 import io
-import sys
 from contextlib import redirect_stdout
 
-from antlr4 import FileStream, InputStream, CommonTokenStream
+import streamlit as st
+from antlr4 import InputStream, CommonTokenStream
 from ExprLexer import ExprLexer
 from ExprParser import ExprParser
 from ExprVisitor import ExprVisitor
@@ -35,6 +35,13 @@ class Visitor(ExprVisitor):
         self.variables[nombre] = valor
         return None
 
+    def visitIfStmt(self, ctx):
+        condicion = self.visit(ctx.expr())
+        if condicion:
+            for stmt in ctx.statement():
+                self.visit(stmt)
+        return None
+
     def visitPrintStmt(self, ctx):
         self.visit(ctx.printArg())
         return None
@@ -55,15 +62,25 @@ class Visitor(ExprVisitor):
     def visitExpr(self, ctx):
         if ctx.NUM():
             return int(ctx.NUM().getText())
+
+        if ctx.CADENA():
+            return ctx.CADENA().getText()[1:-1]
+
         if ctx.ID():
             nombre = ctx.ID().getText()
             if nombre in self.variables:
                 return self.variables[nombre]
             return 0
+
         if ctx.SUMA():
             return self.visit(ctx.expr(0)) + self.visit(ctx.expr(1))
+
         if ctx.RESTA():
             return self.visit(ctx.expr(0)) - self.visit(ctx.expr(1))
+
+        if ctx.MAYOR_IGUAL():
+            return self.visit(ctx.expr(0)) >= self.visit(ctx.expr(1))
+
         return 0
 
 
@@ -82,48 +99,36 @@ def interpret_source(source: str) -> str:
     return buffer.getvalue()
 
 
-def run_cli():
-    if len(sys.argv) > 1:
-        archivo = sys.argv[1]
-        stream = FileStream(archivo, encoding="utf-8")
-        source = stream.read()
-    else:
-        source = input("Java code: ")
+st.title("Intérprete Expr con Streamlit - Ejercicio 12")
+st.markdown("Pega tu código en el cuadro de texto o sube un archivo .java para ejecutar.")
 
-    salida = interpret_source(source)
-    print(salida, end="")
+example_code = (
+    'public class Main {\n'
+    '    public static void main(String[] args) {\n'
+    '        int x = 5;\n'
+    '        if (x >= 5) {\n'
+    '            System.out.println("Mayor o igual a 5");\n'
+    '        }\n'
+    '    }\n'
+    '}'
+)
 
+uploaded_file = st.file_uploader("Sube un archivo .java", type=["java", "txt"])
+if uploaded_file is not None:
+    try:
+        source = uploaded_file.getvalue().decode("utf-8")
+    except UnicodeDecodeError:
+        source = uploaded_file.getvalue().decode("latin-1")
+else:
+    source = example_code
 
-def run_streamlit_app():
-    st.title("Intérprete Expr con Streamlit")
-    st.markdown(
-        "Pega tu código en el cuadro de texto y haz clic en Ejecutar."
-    )
-
-    default_code = (
-        'public class Main {\n'
-        '    public static void main(String[] args) {\n'
-        '        int x = 5;\n'
-        '        int y = x + 3;\n'
-        '        System.out.println("Resultado: " + y);\n'
-        '    }\n'
-        '}'
-    )
-
-    source = st.text_area("Código Expr", value=default_code, height=260)
-    if st.button("Ejecutar"):
-        try:
-            salida = interpret_source(source)
-            if salida:
-                st.code(salida)
-            else:
-                st.success("El código se ejecutó correctamente, pero no hay salida para mostrar.")
-        except Exception as e:
-            st.error(f"Error al interpretar el código: {e}")
-
-
-if __name__ == '__main__':
-    if st is not None and 'streamlit' in sys.argv[0]:
-        run_streamlit_app()
-    else:
-        run_cli()
+source = st.text_area("Código Expr", value=source, height=300)
+if st.button("Ejecutar"):
+    try:
+        salida = interpret_source(source)
+        if salida:
+            st.code(salida)
+        else:
+            st.success("El código se ejecutó correctamente, pero no hay salida para mostrar.")
+    except Exception as e:
+        st.error(f"Error al interpretar el código: {e}")

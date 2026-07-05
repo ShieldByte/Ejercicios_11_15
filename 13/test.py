@@ -4,20 +4,16 @@ from SQLLexer import SQLLexer
 from SQLParser import SQLParser
 from SQLVisitor import SQLVisitor
 
-# Número de control: 21031117
-
-class MiVisitante(SQLVisitor):
+class Visitor(SQLVisitor):
     def __init__(self):
-        self.tablas = {}          # Guarda los datos de las tablas
-        self.estructuras = {}     # Guarda las columnas, tipos y restricciones
+        self.tablas = {}
+        self.estructuras = {}
 
-    # Root: recorre las sentencias del script
     def visitRoot(self, ctx):
         for stmt in ctx.statement():
             self.visit(stmt)
         return None
 
-    # Procesa el CREATE TABLE
     def visitCreateTableStmt(self, ctx):
         nombre = ctx.tableName().getText()
         columnas = []
@@ -30,7 +26,6 @@ class MiVisitante(SQLVisitor):
             columnas.append(nombre_col)
             tipos[nombre_col] = tipo_dato
 
-            # Restricciones de la columna
             restricciones[nombre_col] = []
             for constraint in col_def.columnConstraint():
                 if constraint.PRIMARY() and constraint.KEY():
@@ -47,178 +42,158 @@ class MiVisitante(SQLVisitor):
         print(f"Tabla '{nombre}' creada.")
         return None
 
-    # Procesa el INSERT INTO
     def visitInsertStmt(self, ctx):
         nombre = ctx.tableName().getText()
         if nombre not in self.estructuras:
             print(f"Error: La tabla '{nombre}' no existe.")
             return None
 
-        # Columnas a las que se les inserta
-        columnas_destino = [col.getText() for col in ctx.columnName()]
-        if not columnas_destino:
-            columnas_destino = self.estructuras[nombre]['columnas']
+        cols_dest = [col.getText() for col in ctx.columnName()]
+        if not cols_dest:
+            cols_dest = self.estructuras[nombre]['columnas']
 
-        filas_insertadas = 0
-        for value_list in ctx.valueList():
-            valores = [self.visit(v) for v in value_list.value()]
+        insertados = 0
+        for val_list in ctx.valueList():
+            valores = [self.visit(v) for v in val_list.value()]
             
             fila = {}
-            for i, col in enumerate(columnas_destino):
+            for i, col in enumerate(cols_dest):
                 if i < len(valores):
                     fila[col] = valores[i]
                 else:
                     fila[col] = None
 
-            # Rellenar con autoincrementales si es SERIAL
             for col in self.estructuras[nombre]['columnas']:
                 if col not in fila:
                     if self.estructuras[nombre]['tipos'].get(col) == "SERIAL":
-                        datos_existentes = self.tablas[nombre]['datos']
-                        if datos_existentes:
-                            ultimo_id = max(f.get(col, 0) for f in datos_existentes if f.get(col) is not None)
-                            fila[col] = ultimo_id + 1
+                        datos = self.tablas[nombre]['datos']
+                        if datos:
+                            ultimo = max(f.get(col, 0) for f in datos if f.get(col) is not None)
+                            fila[col] = ultimo + 1
                         else:
                             fila[col] = 1
                     else:
                         fila[col] = None
 
             self.tablas[nombre]['datos'].append(fila)
-            filas_insertadas += 1
+            insertados += 1
 
-        print(f"Insertados {filas_insertadas} registros en '{nombre}'.")
+        print(f"Insertados {insertados} registros en '{nombre}'.")
         return None
 
-    # Procesa el SELECT
     def visitSelectStmt(self, ctx):
-        columnas_seleccion = []
+        cols_sel = []
         alias_tabla = {}
         for select_col in ctx.selectColumns().selectColumn():
             if select_col.tableAlias():
                 alias = select_col.tableAlias().getText()
                 col = select_col.columnName().getText()
-                columnas_seleccion.append((alias, col))
+                cols_sel.append((alias, col))
             else:
-                columnas_seleccion.append((None, select_col.columnName().getText()))
+                cols_sel.append((None, select_col.columnName().getText()))
 
-        # Tabla principal
         from_ctx = ctx.fromClause()
-        tabla_principal = from_ctx.tableRef(0)
-        nombre_tabla_principal = tabla_principal.tableName().getText()
-        alias_principal = tabla_principal.ID().getText() if tabla_principal.ID() else nombre_tabla_principal
-        alias_tabla[alias_principal] = nombre_tabla_principal
+        t_principal = from_ctx.tableRef(0)
+        n_principal = t_principal.tableName().getText()
+        a_principal = t_principal.ID().getText() if t_principal.ID() else n_principal
+        alias_tabla[a_principal] = n_principal
 
-        # INNER JOIN
         if from_ctx.joinCondition():
-            tabla_secundaria = from_ctx.tableRef(1)
-            nombre_tabla_sec = tabla_secundaria.tableName().getText()
-            alias_sec = tabla_secundaria.ID().getText() if tabla_secundaria.ID() else nombre_tabla_sec
-            alias_tabla[alias_sec] = nombre_tabla_sec
+            t_secundaria = from_ctx.tableRef(1)
+            n_secundario = t_secundaria.tableName().getText()
+            a_secundario = t_secundaria.ID().getText() if t_secundaria.ID() else n_secundario
+            alias_tabla[a_secundario] = n_secundario
 
-            # Condicion del JOIN
             join_ctx = from_ctx.joinCondition()
-            col_izq_alias = join_ctx.tableAlias(0).getText()
+            alias_izq = join_ctx.tableAlias(0).getText()
             col_izq = join_ctx.ID(0).getText()
-            col_der_alias = join_ctx.tableAlias(1).getText()
+            alias_der = join_ctx.tableAlias(1).getText()
             col_der = join_ctx.ID(1).getText()
         else:
-            alias_sec = None
-            nombre_tabla_sec = None
-            col_izq_alias = col_izq = col_der_alias = col_der = None
+            a_secundario = None
+            n_secundario = None
+            alias_izq = col_izq = alias_der = col_der = None
 
-        datos_principales = self.tablas[nombre_tabla_principal]['datos']
-        datos_secundarios = self.tablas[nombre_tabla_sec]['datos'] if alias_sec else None
+        datos_pri = self.tablas[n_principal]['datos']
+        datos_sec = self.tablas[n_secundario]['datos'] if a_secundario else None
 
-        # Hacer el join
         resultados = []
-        for fila_principal in datos_principales:
-            if alias_sec and datos_secundarios:
-                for fila_sec in datos_secundarios:
-                    val_izq = fila_principal.get(col_izq) if col_izq_alias == alias_principal else fila_sec.get(col_izq)
-                    val_der = fila_sec.get(col_der) if col_der_alias == alias_sec else fila_principal.get(col_der)
+        for f_pri in datos_pri:
+            if a_secundario and datos_sec:
+                for f_sec in datos_sec:
+                    val_izq = f_pri.get(col_izq) if alias_izq == a_principal else f_sec.get(col_izq)
+                    val_der = f_sec.get(col_der) if alias_der == a_secundario else f_pri.get(col_der)
                     if val_izq == val_der:
-                        fila_combinada = {}
-                        for col, val in fila_principal.items():
-                            fila_combinada[f"{alias_principal}.{col}"] = val
-                        for col, val in fila_sec.items():
-                            fila_combinada[f"{alias_sec}.{col}"] = val
-                        resultados.append(fila_combinada)
+                        comb = {}
+                        for col, val in f_pri.items():
+                            comb[f"{a_principal}.{col}"] = val
+                        for col, val in f_sec.items():
+                            comb[f"{a_secundario}.{col}"] = val
+                        resultados.append(comb)
             else:
-                fila_combinada = {}
-                for col, val in fila_principal.items():
-                    fila_combinada[f"{alias_principal}.{col}"] = val
-                resultados.append(fila_combinada)
+                comb = {}
+                for col, val in f_pri.items():
+                    comb[f"{a_principal}.{col}"] = val
+                resultados.append(comb)
 
-        # Filtrar con WHERE
         if ctx.whereCondition():
-            where_ctx = ctx.whereCondition().expr()
-            resultados_filtrados = []
+            w_ctx = ctx.whereCondition().expr()
+            filtrados = []
             for fila in resultados:
-                if self.evaluar_condicion(where_ctx, fila, alias_tabla):
-                    resultados_filtrados.append(fila)
-            resultados = resultados_filtrados
+                if self.evaluar_cond(w_ctx, fila, alias_tabla):
+                    filtrados.append(fila)
+            resultados = filtrados
 
-        # Mostrar resultados de la consulta
         if resultados:
-            encabezados = []
-            for alias, col in columnas_seleccion:
+            headers = []
+            for alias, col in cols_sel:
                 if alias:
-                    encabezados.append(f"{alias}.{col}")
+                    headers.append(f"{alias}.{col}")
                 else:
-                    encabezados.append(col)
+                    headers.append(col)
 
-            print(" | ".join(encabezados))
-            print("-" * 60)
+            print(" | ".join(headers))
+            print("-" * 50)
 
             for fila in resultados:
-                fila_texto = []
-                for alias, col in columnas_seleccion:
+                txt = []
+                for alias, col in cols_sel:
                     if alias:
-                        clave = f"{alias}.{col}"
+                        key = f"{alias}.{col}"
                     else:
-                        clave = col
-                    valor = fila.get(clave, "NULL")
-                    fila_texto.append(str(valor))
-                print(" | ".join(fila_texto))
+                        key = col
+                    txt.append(str(fila.get(key, "NULL")))
+                print(" | ".join(txt))
         else:
             print("No se encontraron filas.")
-
         return None
 
-    # Evaluar condicion del WHERE
-    def evaluar_condicion(self, ctx, fila, alias_tabla):
+    def evaluar_cond(self, ctx, fila, alias_tabla):
         if ctx.COMPARACION():
-            operador = ctx.COMPARACION().getText()
-            izquierda = self.evaluar_expresion(ctx.expr(0), fila, alias_tabla)
-            derecha = self.evaluar_expresion(ctx.expr(1), fila, alias_tabla)
+            op = ctx.COMPARACION().getText()
+            izq = self.evaluar_expr(ctx.expr(0), fila, alias_tabla)
+            der = self.evaluar_expr(ctx.expr(1), fila, alias_tabla)
 
-            if operador == '=':
-                return izquierda == derecha
-            elif operador == '>':
-                return izquierda > derecha
-            elif operador == '<':
-                return izquierda < derecha
-            elif operador == '>=':
-                return izquierda >= derecha
-            elif operador == '<=':
-                return izquierda <= derecha
-            elif operador == '<>':
-                return izquierda != derecha
-            return False
+            if op == '=': return izq == der
+            elif op == '>': return izq > der
+            elif op == '<': return izq < der
+            elif op == '>=': return izq >= der
+            elif op == '<=': return izq <= der
+            elif op == '<>': return izq != der
         return True
 
-    def evaluar_expresion(self, ctx, fila, alias_tabla):
+    def evaluar_expr(self, ctx, fila, alias_tabla):
         if ctx.value():
             return self.visit(ctx.value())
         if ctx.tableAlias():
             alias = ctx.tableAlias().getText()
             col = ctx.ID().getText()
-            clave = f"{alias}.{col}"
-            return fila.get(clave, "NULL")
+            return fila.get(f"{alias}.{col}", "NULL")
         if ctx.ID():
-            for clave, valor in fila.items():
-                if clave.endswith(f".{ctx.ID().getText()}"):
-                    return valor
+            nombre_col = ctx.ID().getText()
+            for k, val in fila.items():
+                if k.endswith(f".{nombre_col}"):
+                    return val
             return "NULL"
         return None
 
@@ -235,24 +210,22 @@ class MiVisitante(SQLVisitor):
         if ctx.INTEGER():
             return "INTEGER"
         if ctx.VARCHAR():
-            tam = ctx.NUM().getText()
-            return f"VARCHAR({tam})"
+            return f"VARCHAR({ctx.NUM().getText()})"
         if ctx.DATE():
             return "DATE"
         return "DESCONOCIDO"
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
-        nombre_archivo = sys.argv[1]
-        input_stream = FileStream(nombre_archivo, encoding="utf-8")
+        stream = FileStream(sys.argv[1], encoding="utf-8")
     else:
-        texto = input("Introduce el codigo SQL: ")
-        input_stream = InputStream(texto)
+        text = input("SQL: ")
+        stream = InputStream(text)
 
-    lexer = SQLLexer(input_stream)
+    lexer = SQLLexer(stream)
     tokens = CommonTokenStream(lexer)
     parser = SQLParser(tokens)
     arbol = parser.root()
 
-    visitante = MiVisitante()
-    visitante.visit(arbol)
+    v = Visitor()
+    v.visit(arbol)

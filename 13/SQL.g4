@@ -1,13 +1,9 @@
 grammar SQL;
 
-// Número de control: 21031117  (¡Cambia por el tuyo!)
-
-// REGLAS DEL PARSER 
 root: (statement PUNTO_COMA)*;
 
 statement: createTableStmt | insertStmt | selectStmt;
 
-// CREATE TABLE 
 createTableStmt:
 	CREATE TABLE tableName '(' columnDef (',' columnDef)* ')';
 
@@ -21,7 +17,6 @@ dataType: SERIAL | INTEGER | VARCHAR '(' NUM ')' | DATE;
 
 columnConstraint: PRIMARY KEY | NOT NULL;
 
-// INSERT INTO 
 insertStmt:
 	INSERT INTO tableName '(' columnName (',' columnName)* ')' VALUES valueList (
 		',' valueList
@@ -31,34 +26,26 @@ valueList: '(' value (',' value)* ')';
 
 value: NUM | CADENA;
 
-// SELECT 
 selectStmt:
 	SELECT selectColumns FROM fromClause (WHERE whereCondition)?;
 
 selectColumns: selectColumn (',' selectColumn)*;
 
-selectColumn:
-	tableAlias '.' columnName // ej: e.nombre_equipo
-	| columnName; // ej: nombre_equipo
+selectColumn: tableAlias '.' columnName | columnName;
 
 fromClause: tableRef (INNER JOIN tableRef ON joinCondition)?;
 
-tableRef: tableName (ID)?; // ej: alertas_seguridad a
+tableRef: tableName (ID)?;
 
 joinCondition: tableAlias '.' ID COMPARACION tableAlias '.' ID;
 
 whereCondition: expr;
 
-// EXPRESIONES 
-expr:
-	expr COMPARACION expr // a.severidad = 'Alta'
-	| value
-	| tableAlias '.' ID
-	| ID;
+expr: expr COMPARACION expr | value | tableAlias '.' ID | ID;
 
 tableAlias: ID;
 
-// LÉXICO (TOKENS) 
+// tokens
 CREATE: 'CREATE';
 TABLE: 'TABLE';
 SERIAL: 'SERIAL';
@@ -79,13 +66,7 @@ INNER: 'INNER';
 JOIN: 'JOIN';
 ON: 'ON';
 
-COMPARACION:
-	'='
-	| '>'
-	| '<'
-	| '>='
-	| '<='
-	| '<>'; // operadores de comparación
+COMPARACION: '=' | '>' | '<' | '>=' | '<=' | '<>';
 PAR_IZQ: '(';
 PAR_DER: ')';
 COMA: ',';
@@ -94,6 +75,6 @@ PUNTO_COMA: ';';
 
 ID: [a-zA-Z_][a-zA-Z0-9_]*;
 NUM: [0-9]+;
-CADENA: '\'' .*? '\''; // texto entre comillas simples (SQL)
+CADENA: '\'' .*? '\'';
 
 WS: [ \t\r\n]+ -> skip;
